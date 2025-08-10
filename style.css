@@ -1,4 +1,8 @@
 /* Reset و پایه */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -6,23 +10,28 @@ body {
   color: #e5eaf5; /* Freeze Purple رنگ متن اصلی */
 }
 
+/* ناوبری */
 nav {
-  background-color: #8458B3; /* Purple Pain برای ناوبری */
-  padding: 12px 0;
-  text-align: center;
+  background-color: #8458B3; /* Purple Pain */
+  padding: 12px 20px;
+  position: relative;
   box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  z-index: 1000;
 }
 
+/* منوی اصلی */
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
   gap: 30px;
 }
 
+/* آیتم‌های منو */
 nav ul li a {
-  color: #a0d2eb; /* Ice Cold رنگ لینک‌ها */
+  color: #a0d2eb; /* Ice Cold */
   text-decoration: none;
   font-weight: bold;
   font-size: 16px;
@@ -33,10 +42,32 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #d0bdf4; /* Medium Purple هاور پس‌زمینه */
+  background-color: #d0bdf4; /* Medium Purple */
   color: #494d5f; /* متن هاور تیره */
 }
 
+/* دکمه همبرگر برای موبایل */
+.menu-toggle {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1100;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 4px;
+  background-color: #a0d2eb; /* Ice Cold */
+  border-radius: 2px;
+}
+
+/* بخش اصلی */
 main {
   padding: 50px 20px;
   max-width: 900px;
@@ -45,11 +76,42 @@ main {
 }
 
 h1 {
-  color: #e5eaf5; /* Freeze Purple برای تیتر */
+  color: #e5eaf5; /* Freeze Purple */
 }
 
 p {
-  color: #a0d2eb; /* Ice Cold برای پاراگراف */
+  color: #a0d2eb; /* Ice Cold */
   font-size: 18px;
   line-height: 1.5;
+}
+
+/* --------------------------- */
+/* ریسپانسیو برای موبایل */
+/* --------------------------- */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0;
+    background-color: #8458B3; /* Purple Pain */
+    position: absolute;
+    top: 55px;
+    right: 0;
+    width: 200px;
+    display: none; /* به صورت پیشفرض مخفی */
+    border-radius: 0 0 0 10px;
+    box-shadow: -3px 3px 8px rgba(0,0,0,0.5);
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li a {
+    padding: 15px 20px;
+    border-bottom: 1px solid #d0bdf4;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
 }
