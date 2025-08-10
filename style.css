@@ -3,26 +3,30 @@
   --freeze-purple: #e5eaf5;
   --medium-purple: #d0bdf4;
   --purple-pain: #8458B3;
-  --heavy-purple: #a28089;
-  --dark-bg: #2e2e3e; /* طوسی بنفش تیره برای بکگراند */
-  --light-text: #e5eaf5;
-  --highlight: #a0d2eb;
+  --heavy-purple: #494d5f; /* بکگراند تیره */
+}
+
+/* ریست اولیه */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: var(--dark-bg);
-  color: var(--light-text);
+  background-color: var(--heavy-purple);
+  color: var(--freeze-purple);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  margin: 0;
-  padding: 0;
+  min-height: 100vh;
 }
 
+/* ناوبری */
 nav {
   background-color: var(--purple-pain);
   padding: 12px 0;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.7);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 
 nav ul {
@@ -46,25 +50,26 @@ nav ul li a {
 nav ul li a:hover,
 nav ul li a:focus {
   background-color: var(--medium-purple);
-  color: var(--dark-bg);
+  color: var(--heavy-purple);
   outline: none;
 }
 
+/* محتوای اصلی */
 main {
   max-width: 900px;
   margin: 50px auto;
   padding: 30px 20px;
-  background: var(--heavy-purple);
+  background: var(--purple-pain);
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(132, 88, 179, 0.5);
+  box-shadow: 0 5px 15px rgba(132, 88, 179, 0.3);
   text-align: center;
-  color: var(--light-text);
+  color: var(--freeze-purple);
 }
 
 h1 {
   margin-bottom: 20px;
   font-weight: 700;
-  color: var(--freeze-purple);
+  color: var(--ice-cold);
 }
 
 p {
