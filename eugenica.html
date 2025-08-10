@@ -59,10 +59,60 @@
     <img src="images/Dna.GIF" alt="Spinning DNA Spiral" />
   </div>
 
+
   <header>
     <h1>Eugenica</h1>
     <p>A sci-fi, crime, horror, and fantasy story blending dark mysteries and vivid imagination.</p>
   </header>
+
+  <section class="story-summary">
+    <h2>Story Summary</h2>
+    <p>
+      Eugenica is a gripping tale of a dystopian world filled with shadows, secrets, and supernatural beings.
+      The story follows a complex narrative weaving science fiction, crime thriller, horror, and fantasy elements,
+      exploring human nature through a dark and mystical lens.
+    </p>
+  </section>
+
+  <section class="characters">
+    <h2>Main Characters</h2>
+    <div class="character-icons">
+      <button class="char-btn" data-char="victor" aria-label="Victor">
+        <img src="images/icons/victor-icon.png" alt="Victor Icon" />
+        Victor
+      </button>
+      <button class="char-btn" data-char="crista" aria-label="Crista">
+        <img src="images/icons/crista-icon.png" alt="Crista Icon" />
+        Crista
+      </button>
+      <!-- بقیه شخصیت‌ها -->
+    </div>
+
+    <div class="character-details">
+      <div id="victor" class="char-detail">
+        <img src="images/characters/victor.png" alt="Victor" />
+        <p>Victor is a mysterious and powerful figure, torn between love and revenge...</p>
+      </div>
+      <div id="crista" class="char-detail">
+        <img src="images/characters/crista.png" alt="Crista" />
+        <p>Crista, fierce and enigmatic, holds the key to many secrets in Eugenica's dark world...</p>
+      </div>
+      <!-- بقیه توضیحات شخصیت‌ها -->
+    </div>
+  </section>
+
+  <script>
+    const buttons = document.querySelectorAll('.char-btn');
+    const details = document.querySelectorAll('.char-detail');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-char');
+        details.forEach(d => d.classList.remove('active'));
+        document.getElementById(target).classList.add('active');
+      });
+    });
+  </script>
 
 </body>
 </html>
