@@ -1,12 +1,13 @@
+/* Colors from your palette */
 :root {
   --ice-cold: #a0d2eb;
   --freeze-purple: #e5eaf5;
   --medium-purple: #d0bdf4;
   --purple-pain: #8458B3;
-  --heavy-purple: #494d5f; /* بکگراند تیره */
+  --heavy-purple: #494d5f;
 }
 
-/* ریست اولیه */
+/* Reset some default styles */
 * {
   margin: 0;
   padding: 0;
@@ -14,27 +15,24 @@
 }
 
 body {
-  background-color: var(--heavy-purple);
-  color: var(--freeze-purple);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--freeze-purple);
+  color: var(--purple-pain);
   line-height: 1.6;
-  min-height: 100vh;
 }
 
-/* ناوبری */
+/* Navigation styles */
 nav {
   background-color: var(--purple-pain);
   padding: 12px 0;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 }
 
 nav ul {
   list-style: none;
   display: inline-flex;
   gap: 35px;
-  margin: 0;
-  padding: 0;
 }
 
 nav ul li a {
@@ -54,25 +52,24 @@ nav ul li a:focus {
   outline: none;
 }
 
-/* محتوای اصلی */
+/* Main content styles */
 main {
   max-width: 900px;
   margin: 50px auto;
-  padding: 30px 20px;
-  background: var(--purple-pain);
+  padding: 0 20px;
+  background: var(--freeze-purple);
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(132, 88, 179, 0.3);
   text-align: center;
-  color: var(--freeze-purple);
 }
 
 h1 {
+  color: var(--purple-pain);
   margin-bottom: 20px;
   font-weight: 700;
-  color: var(--ice-cold);
 }
 
 p {
+  color: var(--heavy-purple);
   font-size: 18px;
-  color: var(--freeze-purple);
 }
