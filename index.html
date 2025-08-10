@@ -4,68 +4,112 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home - Hobelahi</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
-    /* Reset some default */
-    body {
+    /* Reset */
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+      background-color: #494d5f; /* Heavy Purple */
+      color: #e5eaf5; /* Freeze Purple */
+      padding: 20px;
     }
 
     nav {
-      background-color: #333;
-      padding: 10px 0;
-      text-align: center;
+      background-color: #8458B3; /* Purple Pain */
+      padding: 12px 20px;
+      position: relative;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+      border-radius: 8px;
+      max-width: 700px;
+      margin: 0 auto;
     }
-    <div class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" role="button" tabindex="0">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
 
     nav ul {
       list-style: none;
-      padding: 0;
-      margin: 0;
-      display: inline-flex; /* to keep inline and allow center */
-      gap: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
     }
 
     nav ul li a {
-      color: white;
+      color: #a0d2eb; /* Ice Cold */
       text-decoration: none;
       font-weight: bold;
-      font-size: 16px;
-      padding: 8px 12px;
+      font-size: 18px;
+      padding: 8px 14px;
       display: block;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     nav ul li a:hover {
-      background-color: #555;
-      border-radius: 4px;
+      background-color: #d0bdf4; /* Medium Purple */
+      color: #494d5f; /* متن هاور تیره */
     }
 
-    main {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
+    /* دکمه منوی همبرگر */
+    .menu-toggle {
+      display: none;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      width: 30px;
+      height: 25px;
+      cursor: pointer;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 1100;
     }
 
-    h1 {
-      color: #222;
+    .menu-toggle span {
+      display: block;
+      height: 4px;
+      background-color: #a0d2eb;
+      border-radius: 2px;
     }
 
-    p {
-      color: #555;
-      font-size: 18px;
-      line-height: 1.5;
+    /* ریسپانسیو */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 0;
+        background-color: #8458B3;
+        position: absolute;
+        top: 55px;
+        right: 0;
+        width: 200px;
+        display: none;
+        border-radius: 0 0 0 10px;
+        box-shadow: -3px 3px 8px rgba(0,0,0,0.5);
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      nav ul li a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #d0bdf4;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
     }
   </style>
 </head>
 <body>
   <nav>
+    <div class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" role="button" tabindex="0">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -79,24 +123,23 @@
     <h1>Welcome to Hobelahi</h1>
     <p>This is the homepage of my portfolio website.</p>
   </main>
+
   <script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const navUl = document.querySelector('nav ul');
+    const menuToggle = document.getElementById('menu-toggle');
+    const navUl = document.querySelector('nav ul');
 
-  menuToggle.addEventListener('click', () => {
-    navUl.classList.toggle('active');
-    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-    menuToggle.setAttribute('aria-expanded', !expanded);
-  });
+    menuToggle.addEventListener('click', () => {
+      navUl.classList.toggle('active');
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !expanded);
+    });
 
-  // فعال کردن با کلید اسپیس یا اینتر برای دسترسی
-  menuToggle.addEventListener('keydown', (e) => {
-    if(e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      menuToggle.click();
-    }
-  });
+    menuToggle.addEventListener('keydown', (e) => {
+      if(e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        menuToggle.click();
+      }
+    });
   </script>
-
 </body>
 </html>
