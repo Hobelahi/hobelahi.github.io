@@ -1,75 +1,55 @@
-/* Colors from your palette */
-:root {
-  --ice-cold: #a0d2eb;
-  --freeze-purple: #e5eaf5;
-  --medium-purple: #d0bdf4;
-  --purple-pain: #8458B3;
-  --heavy-purple: #494d5f;
-}
-
-/* Reset some default styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Reset و پایه */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--freeze-purple);
-  color: var(--purple-pain);
-  line-height: 1.6;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #494d5f; /* Heavy Purple پس‌زمینه دارک */
+  color: #e5eaf5; /* Freeze Purple رنگ متن اصلی */
 }
 
-/* Navigation styles */
 nav {
-  background-color: var(--purple-pain);
+  background-color: #8458B3; /* Purple Pain برای ناوبری */
   padding: 12px 0;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 
 nav ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
   display: inline-flex;
-  gap: 35px;
+  gap: 30px;
 }
 
 nav ul li a {
-  color: var(--ice-cold);
+  color: #a0d2eb; /* Ice Cold رنگ لینک‌ها */
   text-decoration: none;
-  font-weight: 600;
+  font-weight: bold;
   font-size: 16px;
-  padding: 8px 15px;
-  border-radius: 6px;
+  padding: 8px 14px;
+  display: block;
+  border-radius: 4px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav ul li a:hover,
-nav ul li a:focus {
-  background-color: var(--medium-purple);
-  color: var(--heavy-purple);
-  outline: none;
+nav ul li a:hover {
+  background-color: #d0bdf4; /* Medium Purple هاور پس‌زمینه */
+  color: #494d5f; /* متن هاور تیره */
 }
 
-/* Main content styles */
 main {
+  padding: 50px 20px;
   max-width: 900px;
-  margin: 50px auto;
-  padding: 0 20px;
-  background: var(--freeze-purple);
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(132, 88, 179, 0.3);
+  margin: 0 auto;
   text-align: center;
 }
 
 h1 {
-  color: var(--purple-pain);
-  margin-bottom: 20px;
-  font-weight: 700;
+  color: #e5eaf5; /* Freeze Purple برای تیتر */
 }
 
 p {
-  color: var(--heavy-purple);
+  color: #a0d2eb; /* Ice Cold برای پاراگراف */
   font-size: 18px;
+  line-height: 1.5;
 }
