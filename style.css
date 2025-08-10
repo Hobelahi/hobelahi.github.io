@@ -134,20 +134,31 @@ nav ul li a.active {
   .about-text {
     max-width: 100%;
   }
-}nav ul li a {
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 8px 14px;
-  display: block;
-  color: #8458B3; /* رنگ بنفش */
-  background-color: #e5eaf5; /* پس‌زمینه روشن */
-  border-radius: 6px;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav ul li a:hover {
-  background-color: #8458B3; /* پس‌زمینه بنفش */
-  color: #e5eaf5; /* رنگ متن روشن */
-  text-decoration: none;
+/* ===== Portfolio Masonry Gallery ===== */
+.gallery {
+  column-count: 3;
+  column-gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.gallery img {
+  width: 100%;
+  margin-bottom: 20px;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(132, 88, 179, 0.4);
+  border: 3px solid #d0bdf4;
+  background-color: #3b3f55;
+  break-inside: avoid;
+}
+
+/* حالت موبایل: فقط دو ستون */
+@media (max-width: 768px) {
+  .gallery {
+    column-count: 2;
+  }
 }
