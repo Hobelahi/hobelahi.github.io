@@ -20,19 +20,21 @@ nav {
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* تنظیم تراز از ابتدا */
   gap: 30px;
   padding: 0;
   margin: 0;
 
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch; /* اسکرول نرم تو iOS */
-  scrollbar-width: none; /* مخفی کردن اسکرول تو فایرفاکس */
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  scroll-behavior: smooth; /* برای اسکرول نرم */
 }
 
 nav ul::-webkit-scrollbar {
-  display: none; /* مخفی کردن اسکرول تو کروم و سافاری */
+  display: none;
 }
+
 
 nav ul li a {
   text-decoration: none;
