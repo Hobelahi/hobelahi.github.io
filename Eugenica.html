@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eugenica - Story & Characters</title>
+  <style>
+    /* ریست ساده برای حذف margin و padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #494d5f;
+      color: #e5eaf5;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* گیف DNA چسبیده به چپ و راست */
+    .dna-gif-container {
+      width: 100vw; /* کل عرض ویوپورت */
+      overflow: hidden; /* بدون اسکرول */
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+    }
+
+    .dna-gif-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background-color: #3b3f55;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #a0d2eb;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #e5eaf5;
+    }
+
+    section.story-summary {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: #3b3f55;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    }
+
+    section.story-summary h2 {
+      color: #a0d2eb;
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      padding-top: 20px;
+      text-align: center;
+    }
+
+    section.story-summary p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #e5eaf5;
+      text-align: justify;
+      padding-bottom: 20px;
+    }
+
+    /* بخش شخصیت‌ها */
+    .characters {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px 40px;
+      background-color: #3b3f55;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    }
+
+    .characters h2 {
+      color: #a0d2eb;
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .character-icons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .char-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      color: #d0bdf4;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+      outline-offset: 4px;
+    }
+
+    .char-btn:hover,
+    .char-btn:focus {
+      color: #8458B3;
+    }
+
+    .char-btn img {
+      display: block;
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 8px;
+      border: 3px solid #d0bdf4;
+      box-shadow: 0 4px 8px rgba(132, 88, 179, 0.7);
+      transition: border-color 0.3s ease;
+    }
+
+    .char-btn:hover img,
+    .char-btn:focus img {
+      border-color: #8458B3;
+    }
+
+    .character-details {
+      margin-top: 30px;
+      background-color: #494d5f;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #e5eaf5;
+    }
+
+    .char-detail {
+      display: none;
+      text-align: center;
+    }
+
+    .char-detail.active {
+      display: block;
+    }
+
+    .char-detail img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      border: 3px solid #d0bdf4;
+      box-shadow: 0 4px 12px rgba(132, 88, 179, 0.7);
+    }
+
+    .char-detail p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    /* ریسپانسیو */
+    @media (max-width: 768px) {
+      .character-icons {
+        gap: 20px;
+      }
+
+      .char-btn img {
+        width: 60px;
+        height: 60px;
+      }
+
+      .character-details {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <!-- منوی سایتت اینجا -->
+  </nav>
+
+  <div class="dna-gif-container">
+    <img src="images/dna-spiral.gif" alt="Spinning DNA Spiral" />
+  </div>
+
+  <header>
+    <h1>Eugenica</h1>
+    <p>A sci-fi, crime, horror, and fantasy story blending dark mysteries and vivid imagination.</p>
+  </header>
+
+  <section class="story-summary">
+    <h2>Story Summary</h2>
+    <p>
+      Eugenica is a gripping tale of a dystopian world filled with shadows, secrets, and supernatural beings.
+      The story follows a complex narrative weaving science fiction, crime thriller, horror, and fantasy elements,
+      exploring human nature through a dark and mystical lens.
+    </p>
+  </section>
+
+  <section class="characters">
+    <h2>Main Characters</h2>
+    <div class="character-icons">
+      <button class="char-btn" data-char="victor" aria-label="Victor">
+        <img src="images/icons/victor-icon.png" alt="Victor Icon" />
+        Victor
+      </button>
+      <button class="char-btn" data-char="crista" aria-label="Crista">
+        <img src="images/icons/crista-icon.png" alt="Crista Icon" />
+        Crista
+      </button>
+      <!-- بقیه شخصیت‌ها -->
+    </div>
+
+    <div class="character-details">
+      <div id="victor" class="char-detail">
+        <img src="images/characters/victor.png" alt="Victor" />
+        <p>Victor is a mysterious and powerful figure, torn between love and revenge...</p>
+      </div>
+      <div id="crista" class="char-detail">
+        <img src="images/characters/crista.png" alt="Crista" />
+        <p>Crista, fierce and enigmatic, holds the key to many secrets in Eugenica's dark world...</p>
+      </div>
+      <!-- بقیه توضیحات شخصیت‌ها -->
+    </div>
+  </section>
+
+  <script>
+    const buttons = document.querySelectorAll('.char-btn');
+    const details = document.querySelectorAll('.char-detail');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-char');
+        details.forEach(d => d.classList.remove('active'));
+        document.getElementById(target).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
