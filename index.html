@@ -18,6 +18,11 @@
       padding: 10px 0;
       text-align: center;
     }
+    <div class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" role="button" tabindex="0">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
     nav ul {
       list-style: none;
@@ -74,5 +79,24 @@
     <h1>Welcome to Hobelahi</h1>
     <p>This is the homepage of my portfolio website.</p>
   </main>
+  <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navUl = document.querySelector('nav ul');
+
+  menuToggle.addEventListener('click', () => {
+    navUl.classList.toggle('active');
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', !expanded);
+  });
+
+  // فعال کردن با کلید اسپیس یا اینتر برای دسترسی
+  menuToggle.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      menuToggle.click();
+    }
+  });
+  </script>
+
 </body>
 </html>
