@@ -21,12 +21,16 @@ nav ul li a {
   text-decoration: none;
   font-weight: bold;
   font-size: 16px;
-  padding: 6px 12px;
+  padding: 8px 14px;
   display: block;
   color: #8458B3; /* رنگ بنفش */
+  background-color: #e5eaf5; /* پس‌زمینه روشن */
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
-  color: #d0bdf4; /* تغییر رنگ موقع هاور */
+  background-color: #8458B3; /* پس‌زمینه بنفش */
+  color: #e5eaf5; /* رنگ متن روشن */
+  text-decoration: none;
 }
