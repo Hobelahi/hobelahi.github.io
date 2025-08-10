@@ -1,38 +1,36 @@
-/* Colors from your palette */
 :root {
   --ice-cold: #a0d2eb;
   --freeze-purple: #e5eaf5;
   --medium-purple: #d0bdf4;
   --purple-pain: #8458B3;
   --heavy-purple: #a28089;
-}
-
-/* Reset some default styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  --dark-bg: #2e2e3e; /* طوسی بنفش تیره برای بکگراند */
+  --light-text: #e5eaf5;
+  --highlight: #a0d2eb;
 }
 
 body {
+  background-color: var(--dark-bg);
+  color: var(--light-text);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--freeze-purple);
-  color: var(--purple-pain);
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
-/* Navigation styles */
 nav {
   background-color: var(--purple-pain);
   padding: 12px 0;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.7);
 }
 
 nav ul {
   list-style: none;
   display: inline-flex;
   gap: 35px;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
@@ -48,28 +46,28 @@ nav ul li a {
 nav ul li a:hover,
 nav ul li a:focus {
   background-color: var(--medium-purple);
-  color: var(--heavy-purple);
+  color: var(--dark-bg);
   outline: none;
 }
 
-/* Main content styles */
 main {
   max-width: 900px;
   margin: 50px auto;
-  padding: 0 20px;
-  background: var(--freeze-purple);
+  padding: 30px 20px;
+  background: var(--heavy-purple);
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(132, 88, 179, 0.3);
+  box-shadow: 0 5px 15px rgba(132, 88, 179, 0.5);
   text-align: center;
+  color: var(--light-text);
 }
 
 h1 {
-  color: var(--purple-pain);
   margin-bottom: 20px;
   font-weight: 700;
+  color: var(--freeze-purple);
 }
 
 p {
-  color: var(--heavy-purple);
   font-size: 18px;
+  color: var(--freeze-purple);
 }
