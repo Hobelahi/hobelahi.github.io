@@ -43,7 +43,7 @@ nav ul li a {
   padding: 8px 14px;
   display: block;
   color: #8458B3; /* رنگ بنفش */
-  background-color: #d0bdf4; /* پس‌زمینه روشن */
+  background-color: #e5eaf5; /* پس‌زمینه روشن */
   border-radius: 6px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
